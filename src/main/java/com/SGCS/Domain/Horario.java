@@ -13,7 +13,7 @@ public class Horario {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idHorario;
 
-    @OneToOne
+    //@OneToOne
     @JoinColumn(name = "idDoctor")
     private Doctor doctor;
 
@@ -23,5 +23,6 @@ public class Horario {
     private Time horaFin;
 
     private String diaTrabjo;
+
     private boolean disponible;
 }

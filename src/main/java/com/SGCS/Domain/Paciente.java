@@ -37,6 +37,6 @@ public class Paciente {
     @Column(length = 255)
     private String email;
 
-    @OneToMany(mappedBy = "paciente")
+   // @OneToMany(mappedBy = "paciente")
     private List<Cita> citas;
 }

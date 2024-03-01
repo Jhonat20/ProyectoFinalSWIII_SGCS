@@ -20,11 +20,11 @@ public class Especialidad {
     @Column(columnDefinition = "TEXT")
     private String descripcion;
 
-    @ManyToOne
+    //@ManyToOne
     @JoinColumn(name = "especialidadPadreId")
     private Especialidad especialidadPadre;
 
-    @OneToMany(mappedBy = "especialidadPadre", cascade = CascadeType.ALL)
+   // @OneToMany(mappedBy = "especialidadPadre", cascade = CascadeType.ALL)
     private Set<Especialidad> subespecialidades;
 
     @ManyToMany(mappedBy = "especialidades")

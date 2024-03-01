@@ -16,7 +16,7 @@ public class Cita {
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaHora;
 
-    @ManyToOne
+  //  @ManyToOne
     @JoinColumn(name = "idPaciente")
     private Paciente paciente;
 
