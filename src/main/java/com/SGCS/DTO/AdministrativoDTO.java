@@ -1,5 +1,6 @@
 package com.SGCS.DTO;
 
+
 import lombok.Data;
 
 import java.util.Date;
