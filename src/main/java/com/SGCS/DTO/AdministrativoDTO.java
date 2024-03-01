@@ -5,8 +5,9 @@ import lombok.Data;
 import java.util.Date;
 
 @Data
-public class PacienteDTO {
-        private Long idPaciente;
+public class AdministrativoDTO {
+
+        private Long idAdministrativo;
 
         private String nombre;
 
@@ -24,4 +25,7 @@ public class PacienteDTO {
 
         private String email;
 
+        private String cargo;
+
+        private String departamento;
 }
