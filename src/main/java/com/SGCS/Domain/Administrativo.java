@@ -1,10 +1,22 @@
 package com.SGCS.Domain;
 
-public class Administrativo {
+import jakarta.persistence.*;
+import lombok.Data;
 
-    private String Nombre;
-    private String Apellido;
-    private String Cargo;
-    private String Telefono;
-    private String Email;
+@Data
+@Entity
+@Table(name = "administrativos")
+public class Administrativo {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long idAdministrativo;
+
+    @Column(length = 255)
+    private String nombre;
+
+    @Column(length = 255)
+    private String apellido;
+
+    @Column(length = 255)
+    private String cargo;
 }
