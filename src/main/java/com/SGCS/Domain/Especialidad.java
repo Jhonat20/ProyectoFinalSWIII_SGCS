@@ -11,7 +11,7 @@ import java.util.Set;
 public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idEspecialidad;
+    private Long id;
 
     @Column(length = 255, nullable = false)
     private String nombre;
