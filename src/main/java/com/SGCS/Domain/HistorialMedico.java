@@ -11,9 +11,12 @@ public class HistorialMedico {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long idHistorial;
 
+
     @OneToOne
     @JoinColumn(name = "idPaciente")
     private Paciente paciente;
+
+    private  String descripcion;
 
     @Column(columnDefinition = "TEXT")
     private String alergias;
@@ -26,6 +29,7 @@ public class HistorialMedico {
 
     @Column(columnDefinition = "TEXT")
     private String medicacionHabitual;
+
 
 
 }
