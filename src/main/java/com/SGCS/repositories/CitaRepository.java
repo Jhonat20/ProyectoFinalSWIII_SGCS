@@ -1,4 +1,8 @@
 package com.SGCS.repositories;
 
-public interface CitaRepository {
+import com.SGCS.Domain.Cita;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface CitaRepository extends JpaRepository<Cita, Long> {
+
 }
