@@ -1,6 +1,5 @@
 package com.SGCS.Domain;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 
