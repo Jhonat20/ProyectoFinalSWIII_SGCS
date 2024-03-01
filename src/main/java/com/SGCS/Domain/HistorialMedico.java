@@ -12,7 +12,7 @@ public class HistorialMedico {
     private Long idHistorial;
 
 
-    @OneToOne
+   // @OneToOne
     @JoinColumn(name = "idPaciente")
     private Paciente paciente;
 

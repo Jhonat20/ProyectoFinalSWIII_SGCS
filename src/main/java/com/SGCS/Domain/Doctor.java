@@ -19,7 +19,7 @@ public class Doctor {
     @Column(length = 255, nullable = false)
     private String apellido;
 
-    @ManyToOne
+  //  @ManyToOne
     @JoinColumn(name = "idEspecialidad")
     private Especialidad especialidad;
 
@@ -32,9 +32,9 @@ public class Doctor {
     @Column(length = 255, nullable = false, unique = true)
     private String email;
 
-    @OneToOne(mappedBy = "doctor", cascade = CascadeType.ALL)
+  //  @OneToOne(mappedBy = "doctor", cascade = CascadeType.ALL)
     private Horario horario;
 
-    @OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
+    //@OneToMany(mappedBy = "doctor", cascade = CascadeType.ALL)
     private Set<Cita> citas;
 }
