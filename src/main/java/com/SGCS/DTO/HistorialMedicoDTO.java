@@ -11,4 +11,5 @@ private String alergias;
 private String enfermedadesPrevias;
 private String cirugias;
 private String medicacionHabitual;
+
 }
