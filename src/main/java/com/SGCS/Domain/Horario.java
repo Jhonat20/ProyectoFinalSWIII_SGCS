@@ -17,12 +17,11 @@ public class Horario {
     @JoinColumn(name = "idDoctor")
     private Doctor doctor;
 
-    @Column(length = 255)
-    private String diasTrabajo;
+    @Temporal(TemporalType.TIME)
+    private Time horaInicio;
+    @Temporal(TemporalType.TIME)
+    private Time horaFin;
 
-    @Column
-    private Time horasEntrada;
-
-    @Column
-    private Time horasSalida;
+    private String diaTrabjo;
+    private boolean disponible;
 }
