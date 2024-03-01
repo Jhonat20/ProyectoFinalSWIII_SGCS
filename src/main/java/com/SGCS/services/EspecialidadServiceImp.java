@@ -45,15 +45,4 @@ public class EspecialidadServiceImp implements EspecialidadService {
         return especialidadRepository.findById(idEspecialidad).orElse(null);
     }
 
-    // Implementación de los métodos adicionales
-
-    @Override
-    public List<Especialidad> buscarEspecialidadesPorNombre(String nombre) {
-        return especialidadRepository.findByNombreContainingIgnoreCase(nombre);
-    }
-
-    @Override
-    public List<Especialidad> buscarSubespecialidades(Long idEspecialidadPadre) {
-        return especialidadRepository.findByEspecialidadPadreId(idEspecialidadPadre);
-    }
 }

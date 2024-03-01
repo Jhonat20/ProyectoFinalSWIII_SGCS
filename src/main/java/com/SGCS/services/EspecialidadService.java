@@ -10,8 +10,4 @@ public interface EspecialidadService {
         List<Especialidad> listarEspecialidades();
         Especialidad buscarEspecialidadPorId(Long idEspecialidad);
 
-        // Métodos adicionales
-        List<Especialidad> buscarEspecialidadesPorNombre(String nombre);
-        List<Especialidad> buscarSubespecialidades(Long idEspecialidadPadre);
-
 }

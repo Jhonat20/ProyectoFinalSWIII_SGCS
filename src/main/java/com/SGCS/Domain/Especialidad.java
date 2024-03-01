@@ -3,6 +3,7 @@ package com.SGCS.Domain;
 import jakarta.persistence.*;
 import lombok.Data;
 
+import java.util.HashSet;
 import java.util.Set;
 
 @Data
@@ -11,7 +12,7 @@ import java.util.Set;
 public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private Long especialidadId;
 
     @Column(length = 255, nullable = false)
     private String nombre;
@@ -25,4 +26,8 @@ public class Especialidad {
 
     @OneToMany(mappedBy = "especialidadPadre", cascade = CascadeType.ALL)
     private Set<Especialidad> subespecialidades;
+
+    @ManyToMany(mappedBy = "especialidades")
+    private Set<Doctor> doctores = new HashSet<>();
+
 }
