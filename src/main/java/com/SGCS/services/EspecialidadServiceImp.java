@@ -24,7 +24,6 @@ public class EspecialidadServiceImp implements EspecialidadService {
         if (especialidadEncontrada != null) {
             especialidadEncontrada.setNombre(especialidad.getNombre());
             especialidadEncontrada.setDescripcion(especialidad.getDescripcion());
-            especialidadEncontrada.setEspecialidadPadre(especialidad.getEspecialidadPadre());
             return especialidadRepository.save(especialidadEncontrada);
         }
         return null;

@@ -12,20 +12,13 @@ import java.util.Set;
 public class Especialidad {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long especialidadId;
+    private Long idEspecialidad;
 
     @Column(length = 255, nullable = false)
     private String nombre;
 
     @Column(columnDefinition = "TEXT")
     private String descripcion;
-
-    //@ManyToOne
-    @JoinColumn(name = "especialidadPadreId")
-    private Especialidad especialidadPadre;
-
-   // @OneToMany(mappedBy = "especialidadPadre", cascade = CascadeType.ALL)
-    private Set<Especialidad> subespecialidades;
 
     @ManyToMany(mappedBy = "especialidades")
     private Set<Doctor> doctores = new HashSet<>();
